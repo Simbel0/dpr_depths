@@ -1,0 +1,19 @@
+{
+    "id": "dpr_depths",
+    "name": "IN THE DEPTHS",
+    "subtitle": "Somewhere, deep in the darkness, the remains of something stands there alone. Is there a Dark Fountain to seal? What is this place?",
+
+    "version": "v0.0.0",
+
+    "chapter": 2,
+
+    "map": "depths_start",
+
+    "dlc": {
+        "extraBinCodes": {
+            "INDEPTHS": true
+        },
+        "worldMap": {},
+        "bosses": {}
+    }
+}
