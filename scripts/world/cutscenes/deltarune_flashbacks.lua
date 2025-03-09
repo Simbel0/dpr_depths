@@ -37,5 +37,40 @@ return {
 		end
 
 		cutscene:text("* (Wait, how does Hero know about Castle Town...?)", "nervous_side", susie)
+	end,
+	lancer_area = function(cutscene)
+		local susie = cutscene:getCharacter("susie")
+		local hero = cutscene:getCharacter("hero")
+
+		cutscene:detachFollowers()
+
+		cutscene:wait(cutscene:walkTo(susie, 980, 790))
+		cutscene:look(susie, "up")
+
+		cutscene:wait(0.5)
+		susie:shake()
+		susie:setSprite("away")
+
+		cutscene:wait(2)
+
+		susie:setSprite("away_turn")
+		cutscene:text("* ...[wait:4]Nothing.", "suspicious", "susie")
+
+		cutscene:wait(1.5)
+
+		susie:setSprite("walk")
+		cutscene:look(susie, "left")
+
+		cutscene:wait(1.5)
+
+		cutscene:wait(cutscene:walkTo(susie, hero.x+hero.width+30, hero.y))
+
+		cutscene:text("* There's nothing that can kill us up there,[wait:2] we're good.", "smile", "susie")
+		cutscene:text("* Lead the way,[wait:2] Hero!", "sincere_smile", "susie")
+
+		cutscene:wait(cutscene:attachFollowers())
+		cutscene:wait(0.5)
+
+		cutscene:text("* (I wasn't worried about this up until now??)", "shocked", "hero")
 	end
 }
