@@ -39,6 +39,11 @@ return {
 		cutscene:text("* (Wait, how does Hero know about Castle Town...?)", "nervous_side", susie)
 	end,
 	lancer_area = function(cutscene)
+		if Game:getFlag("depths_stalac_assault") then
+			cutscene:endCutscene()
+			return
+		end
+		
 		local susie = cutscene:getCharacter("susie")
 		local hero = cutscene:getCharacter("hero")
 
@@ -61,7 +66,7 @@ return {
 		susie:setSprite("walk")
 		cutscene:look(susie, "left")
 
-		cutscene:wait(1.5)
+		cutscene:wait(0.5)
 
 		cutscene:wait(cutscene:walkTo(susie, hero.x+hero.width+30, hero.y))
 
