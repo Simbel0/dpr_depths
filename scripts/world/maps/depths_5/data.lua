@@ -338,7 +338,7 @@ return {
       objects = {
         {
           id = 1,
-          name = "chess",
+          name = "chest",
           type = "",
           shape = "rectangle",
           x = 1440,
@@ -380,8 +380,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text_1"] = "* (\"Wrong way.\")",
-            ["text_2"] = "* You're starting to think you've taken the wrong way.)",
+            ["text1"] = "* (\"Wrong way.\")",
+            ["text2"] = "* You're starting to think you've taken the wrong way.)",
             ["texture"] = "world/sign"
           }
         },

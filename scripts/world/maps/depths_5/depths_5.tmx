@@ -255,7 +255,7 @@
 </data>
  </layer>
  <objectgroup color="#ff00ff" id="3" name="objects">
-  <object id="1" name="chess" x="1440" y="600" width="40" height="40">
+  <object id="1" name="chest" x="1440" y="600" width="40" height="40">
    <properties>
     <property name="item" value="sharp_stone"/>
    </properties>
@@ -269,8 +269,8 @@
   </object>
   <object id="6" name="interactable" x="3520" y="1240" width="40" height="40">
    <properties>
-    <property name="text_1" value="* (&quot;Wrong way.&quot;)"/>
-    <property name="text_2" value="* You're starting to think you've taken the wrong way.)"/>
+    <property name="text1" value="* (&quot;Wrong way.&quot;)"/>
+    <property name="text2" value="* You're starting to think you've taken the wrong way.)"/>
     <property name="texture" value="world/sign"/>
    </properties>
   </object>
