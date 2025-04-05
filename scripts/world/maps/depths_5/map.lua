@@ -5,7 +5,6 @@ function Depths_5:onEnter()
 
     if Game:getFlag("depths_stalac_assault") then
         Game.world:setBattle(true)
-        Game.world.music:play("creepychase")
     end
 
     -- TODO:

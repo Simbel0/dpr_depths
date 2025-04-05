@@ -1,28 +1,28 @@
-local actor, super = Class(Actor, "starwalker")
+local actor, super = Class(Actor, "starry")
 
 function actor:init()
     super.init(self)
 
     -- Display name (optional)
-    self.name = "Starwalker"
+    self.name = "Starry"
 
     -- Width and height for this actor, used to determine its center
-    self.width = 37
-    self.height = 36
+    self.width = 30
+    self.height = 38
 
     -- Hitbox for this actor in the overworld (optional, uses width and height by default)
-    self.hitbox = {2, 26, 27, 10}
+    self.hitbox = {0, 38/2, 30, 38}
 
     -- Color for this actor used in outline areas (optional, defaults to red)
-    self.color = {1, 1, 0}
+    self.color = {1, 0, 0}
 
     -- Whether this actor flips horizontally (optional, values are "right" or "left", indicating the flip direction)
     self.flip = nil
 
     -- Path to this actor's sprites (defaults to "")
-    self.path = "npcs/starwalker"
+    self.path = "npcs/starry"
     -- This actor's default sprite or animation, relative to the path (defaults to "")
-    self.default = ""
+    self.default = "walk"
 
     -- Sound to play when this actor speaks (optional)
     self.voice = nil
@@ -35,7 +35,9 @@ function actor:init()
     self.can_blush = false
 
     -- Table of talk sprites and their talk speeds (default 0.25)
-    self.talk_sprites = {}
+    self.talk_sprites = {
+        [""] = 0.2
+    }
 
     -- Table of sprite animations
     self.animations = {}
