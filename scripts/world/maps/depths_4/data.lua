@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 24,
+  nextobjectid = 27,
   properties = {
     ["music"] = "creepylandscape"
   },
@@ -18,14 +18,12 @@ return {
     {
       name = "dark",
       firstgid = 1,
-      filename = "../../tilesets/dark.tsx",
-      exportfilename = "../../tilesets/dark.lua"
+      filename = "../../tilesets/dark.tsx"
     },
     {
       name = "battleLayer",
       firstgid = 86,
-      filename = "../../tilesets/battleLayer.tsx",
-      exportfilename = "../../tilesets/battleLayer.lua"
+      filename = "../../tilesets/battleLayer.tsx"
     }
   },
   layers = {
@@ -346,6 +344,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 26,
+          name = "entry_r",
+          type = "",
+          shape = "point",
+          x = 6360.33,
+          y = 820.333,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -422,6 +433,38 @@ return {
           properties = {
             ["cutscene"] = "fall.start",
             ["once"] = false
+          }
+        },
+        {
+          id = 24,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 200,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "depths_3",
+            ["marker"] = "entry_r"
+          }
+        },
+        {
+          id = 25,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 6400,
+          y = 760,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "depths_5",
+            ["marker"] = "entry_l"
           }
         }
       }

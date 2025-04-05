@@ -1,7 +1,7 @@
 local Stalactite, super = Class(WorldBullet)
 
-function Stalactite:init(x, y, gravity, play_sound)
-    super.init(self, x, y-SCREEN_HEIGHT+10, "bullets/stalac")
+function Stalactite:init(x, y, gravity, play_sound, start_y)
+    super.init(self, x, start_y or 0, "bullets/stalac")
     self:setOrigin(0.5, 1)
     self.dest_y = y
 
@@ -12,6 +12,8 @@ function Stalactite:init(x, y, gravity, play_sound)
     self.outline = self:addFX(OutlineFX())
 
     self.play_sound = play_sound
+
+    self.remove_offscreen = false
 
     self.ellipse = Ellipse(self.x, self.dest_y, 15, 7.5)
     self.ellipse.alpha = 0
