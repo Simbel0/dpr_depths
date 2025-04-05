@@ -1,6 +1,6 @@
 return {
 	prestart = function(cutscene)
-		if Game:getFlag("depths_stalac_assault") then
+		if Game:getFlag("depths_stalac_assault_intro_done") then
 			cutscene:endCutscene()
 			return
 		end
@@ -43,7 +43,7 @@ return {
 			return stalac
 		end
 
-		if not Game:getFlag("depths_stalac_assault") then
+		if not Game:getFlag("depths_stalac_assault_intro_done") then
 
 			first_sta = createCutsceneStalac(susie.x, susie.y)
 
@@ -102,8 +102,9 @@ return {
 		cutscene:attachFollowers()
 		cutscene:text("* RUN!", "bangs/nervous_annoyed", "susie")
 		
-		Game:setFlag("depths_stalac_assault", true)
+		Game:setFlag("depths_stalac_assault_intro_done", true)
 		Game:saveQuick()
+		Game:setFlag("depths_stalac_assault", true)
 
 		Game.world.music:play("creepychase")
 		Game.world:setBattle(true)

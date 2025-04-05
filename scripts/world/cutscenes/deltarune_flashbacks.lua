@@ -39,7 +39,7 @@ return {
 		cutscene:text("* (Wait, how does Hero know about Castle Town...?)", "nervous_side", susie)
 	end,
 	lancer_area = function(cutscene)
-		if Game:getFlag("depths_stalac_assault") then
+		if Game:getFlag("depths_stalac_assault_intro_done") then
 			cutscene:endCutscene()
 			return
 		end
