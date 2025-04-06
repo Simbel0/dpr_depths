@@ -325,12 +325,14 @@
   <object id="2" name="interactable" x="3720" y="2880" width="40" height="40">
    <properties>
     <property name="flagcheck" value="depths_stalac_assault"/>
+    <property name="solid" type="bool" value="true"/>
     <property name="text" value="* (It's a dead savepoint.[wait:5] You might have more important things to do than revive it.)"/>
     <property name="texture" value="dead_savepoint"/>
    </properties>
   </object>
   <object id="6" name="interactable" x="3520" y="1240" width="40" height="40">
    <properties>
+    <property name="solid" type="bool" value="true"/>
     <property name="text1" value="* (&quot;Wrong way.&quot;)"/>
     <property name="text2" value="* You're starting to think you've taken the wrong way.)"/>
     <property name="texture" value="world/sign"/>

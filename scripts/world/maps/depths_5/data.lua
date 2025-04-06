@@ -1123,6 +1123,7 @@ return {
           visible = true,
           properties = {
             ["flagcheck"] = "depths_stalac_assault",
+            ["solid"] = true,
             ["text"] = "* (It's a dead savepoint.[wait:5] You might have more important things to do than revive it.)",
             ["texture"] = "dead_savepoint"
           }
@@ -1139,6 +1140,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["solid"] = true,
             ["text1"] = "* (\"Wrong way.\")",
             ["text2"] = "* You're starting to think you've taken the wrong way.)",
             ["texture"] = "world/sign"
