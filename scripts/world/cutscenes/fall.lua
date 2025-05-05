@@ -309,11 +309,11 @@ return {
 		cutscene:slideTo(starry, 960, 100, 0.7)
 		cutscene:panTo(960, 260)
 		
-		cutscene:text("* Hey![wait:2] You there!")
+		cutscene:text("* Hey![wait:2] You there!", "neutral", "starry")
 
 		cutscene:text("* Huh??", "surprise", "susie")
 
-		cutscene:text("* Jump!![wait:2] There's no other way!")
+		cutscene:text("* Jump!![wait:2] There's no other way!", "neutral", "starry")
 
 		cutscene:text("* Who are you??[wait:2] Why should we believe you???", "sus_nervous", "susie")
 
@@ -434,18 +434,18 @@ return {
 
 		cutscene:wait(cutscene:panTo(starry.x, starry.y))
 
-		cutscene:text("* Glad to see you two are alright!")
+		cutscene:text("* Glad to see you two are alright!", "neutral", "starry")
 		cutscene:text("* And... Who are you supposed to be?", "sus_nervous", "susie")
-		cutscene:text("* Oh, uhm... Well about that...")
+		cutscene:text("* Oh, uhm... Well about that...", "neutral", "starry")
 		cutscene:text("* I'm not too sure myself. But I gave myself the name \"Starry\"!")
-		cutscene:text("* I think I'm the only thing living in those wastelands.")
-		cutscene:text("* Well, the only one sane, at least.")
+		cutscene:text("* I think I'm the only thing living in those wastelands.", "neutral", "starry")
+		cutscene:text("* Well, the only one sane, at least.", "neutral", "starry")
 		cutscene:text("* I see.", "nervous", "susie")
 		cutscene:text("* Starry, huh? My name's Susie. And that's Hero.", "smile", "susie")
-		cutscene:text("* Ah yes! You must be the ones I felt the arrival of!")
+		cutscene:text("* Ah yes! You must be the ones I felt the arrival of!", "neutral", "starry")
 		cutscene:text("* You... felt our arrival?", "nervous_side", "susie")
-		cutscene:text("* Yes! I had a strong urge telling me that someone appeared here.")
-		cutscene:text("* And whoever that was, I am meant to help them.")
+		cutscene:text("* Yes! I had a strong urge telling me that someone appeared here.", "neutral", "starry")
+		cutscene:text("* And whoever that was, I am meant to help them.", "neutral", "starry")
 
 		cutscene:wait(0.5)
 
@@ -457,9 +457,9 @@ return {
 		cutscene:text("* Okay, that's great and all but uh...", "neutral_opened_b", "hero")
 		cutscene:text("* Do you know how to get out of here?", "really", "hero")
 		cutscene:text("* Or save this place, I don't know.", "neutral_closed_b", "hero")
-		cutscene:text("* I... think so?")
-		cutscene:text("* There's nothing in this place as far as I'm aware but maybe...")
-		cutscene:text("* Maybe there's something at the end that could help you!")
+		cutscene:text("* I... think so?", "neutral", "starry")
+		cutscene:text("* There's nothing in this place as far as I'm aware but maybe...", "neutral", "starry")
+		cutscene:text("* Maybe there's something at the end that could help you!", "neutral", "starry")
 
 		cutscene:text("* I guess that's how those adventures work.", "neutral_closed", "hero")
 		cutscene:text("* Alright, let's go.", "happy", "hero")

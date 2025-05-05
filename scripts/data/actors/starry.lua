@@ -11,7 +11,7 @@ function actor:init()
     self.height = 38
 
     -- Hitbox for this actor in the overworld (optional, uses width and height by default)
-    self.hitbox = {0, 38/2, 30, 38}
+    self.hitbox = {4, 38/2, 30-10, 38/2}
 
     -- Color for this actor used in outline areas (optional, defaults to red)
     self.color = {1, 0, 0}
@@ -25,11 +25,11 @@ function actor:init()
     self.default = "walk"
 
     -- Sound to play when this actor speaks (optional)
-    self.voice = nil
+    self.voice = "starry"
     -- Path to this actor's portrait for dialogue (optional)
-    self.portrait_path = nil
+    self.portrait_path = "face/starry"
     -- Offset position for this actor's portrait (optional)
-    self.portrait_offset = nil
+    self.portrait_offset = {-24, -20}
 
     -- Whether this actor as a follower will blush when close to the player
     self.can_blush = false
