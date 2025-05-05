@@ -14,6 +14,30 @@ function Depths_6:onEnter()
             end
         end
     end)
+
+    if Game:getFlag("depths_intro_done") then
+        if not Game:getFlag("depths_stalac_after_pos") then
+            Game:setFlag("depths_stalac_after_pos", {})
+        end
+
+        for i=1,50 do
+            local x, y
+            local pos = Game:getFlag("depths_stalac_after_pos", {})
+            if pos[i] then
+                x = pos[i][1]
+                y = pos[i][2]
+            else
+                x = Utils.random(840, 1055)
+                y = Utils.random(240, 345)
+                Game.flags["depths_stalac_after_pos"][i] = {x, y}
+            end
+            local sp = Sprite("bullets/stalac_debris", x, y)
+            sp.layer = WORLD_LAYERS["bullets"]
+            sp:setScale(2)
+            sp:setOrigin(0.5)
+            Game.world:addChild(sp)
+        end
+    end
 end
 
 return Depths_6

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 12,
+  nextobjectid = 13,
   properties = {
     ["music"] = "creepylandscape"
   },
@@ -283,6 +283,19 @@ return {
           shape = "point",
           x = 301.333,
           y = 296,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 12,
+          name = "entry_t",
+          type = "",
+          shape = "point",
+          x = 960,
+          y = 40,
           width = 0,
           height = 0,
           rotation = 0,

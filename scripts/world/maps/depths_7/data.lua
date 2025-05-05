@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 29,
+  nextobjectid = 32,
   properties = {
     ["music"] = "creepylandscape",
     ["name"] = "Depths - Safe Place"
@@ -554,6 +554,38 @@ return {
           properties = {
             ["skin"] = "depths"
           }
+        },
+        {
+          id = 29,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 920,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "depths_6",
+            ["marker"] = "entry_t"
+          }
+        },
+        {
+          id = 30,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1200,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "depths_8",
+            ["marker"] = "entry_l"
+          }
         }
       }
     },
@@ -604,6 +636,19 @@ return {
           shape = "point",
           x = 300.333,
           y = 439.333,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "entry_r",
+          type = "",
+          shape = "point",
+          x = 1160,
+          y = 400,
           width = 0,
           height = 0,
           rotation = 0,
