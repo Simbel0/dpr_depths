@@ -408,7 +408,7 @@ return {
 		local player = Game.world.player
 		local follow1 = Game.world.followers[1]
 
-		local starry = cutscene:spawnNPC("starry", 580, 545)
+		local starry = cutscene:spawnNPC("starry", 580, 545, {cutscene = "starry_npc.depths_7"})
 
 		cutscene:detachCamera()
 		cutscene:detachFollowers()

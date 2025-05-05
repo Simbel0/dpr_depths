@@ -19,7 +19,7 @@ return {
     {
       name = "dark",
       firstgid = 1,
-      filename = "../tilesets/dark.tsx"
+      filename = "../../tilesets/dark.tsx"
     }
   },
   layers = {
@@ -536,7 +536,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (The deep darkness still loams all around you.)",
+            ["text1"] = "* (The deep darkness still looms all around you.)",
             ["text2"] = "* (You are filled with the power of uneasiness.)"
           }
         },
