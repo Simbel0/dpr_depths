@@ -413,6 +413,13 @@ return {
 		cutscene:detachCamera()
 		cutscene:detachFollowers()
 
+		local old_pos = {}
+		for i,trans in ipairs(Game.world.stage:getObjects(Transition)) do
+			table.insert(old_pos, {trans:getPosition()})
+			trans:setPosition(0, 0)
+		end
+		print(Utils.dump(old_pos))
+
 		player:setPosition(545, Game.world.map.height*Game.world.map.tile_height+70)
 		follow1:setPosition(610, Game.world.map.height*Game.world.map.tile_height+70)
 
@@ -529,6 +536,10 @@ return {
 		cutscene:interpolateFollowers()
 		cutscene:attachFollowersImmediate()
 		cutscene:wait(cutscene:attachCamera())
+
+		for i,trans in ipairs(Game.world.stage:getObjects(Transition)) do
+			trans:setPosition(unpack(old_pos[i]))
+		end
 
 		Game:setFlag("depths_intro_done", true)
 	end
