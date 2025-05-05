@@ -200,7 +200,10 @@ return {
 
 		cutscene:text("* We're trapped!", "bangs/nervous_annoyed", "susie")
 
-		cutscene:walkTo(follow1, player.x-80, player.y, 0.5, "right")
+		cutscene:walkPath(follow1, {
+			{player.x-80, follow1.y},
+			{player.x-80, player.y}
+		}, {time=0.5, facing="right"})
 
 		cutscene:text("* "..GeneralUtils:getLeader().name..",[wait:0.1] what do we do??", "shy_b", "susie")
 		cutscene:text("* Uh...", "shocked", "hero")
@@ -393,5 +396,140 @@ return {
 
 		cutscene:walkTo(player, player.x, 0, 0.5)
 		cutscene:walkTo(follow1, follow1.x, 0, 0.5)
+
+		cutscene:wait(function()
+			return Game.world.map.id == "depths_7"
+		end)
+
+		print("Follow up")
+		cutscene:gotoCutscene("fall.post")
+	end,
+	post = function(cutscene)
+		local player = Game.world.player
+		local follow1 = Game.world.followers[1]
+
+		local starry = cutscene:spawnNPC("starry", 580, 545)
+
+		cutscene:detachCamera()
+		cutscene:detachFollowers()
+
+		player:setPosition(545, Game.world.map.height*Game.world.map.tile_height+70)
+		follow1:setPosition(610, Game.world.map.height*Game.world.map.tile_height+70)
+
+		local walk1 = cutscene:walkTo(player, player.x, 680, 1)
+		local walk2 = cutscene:walkTo(follow1, follow1.x, 680, 1)
+
+		cutscene:wait(function()
+			return walk1() and walk2()
+		end)
+
+		walk1 = cutscene:walkTo(player, player.x-20, 610, 1)
+		walk2 = cutscene:walkTo(follow1, follow1.x+20, 610, 1)
+
+		cutscene:wait(function()
+			return walk1() and walk2()
+		end)
+
+		cutscene:wait(0.5)
+
+		cutscene:wait(cutscene:panTo(starry.x, starry.y))
+
+		cutscene:text("* Glad to see you two are alright!")
+		cutscene:text("* And... Who are you supposed to be?", "sus_nervous", "susie")
+		cutscene:text("* Oh, uhm... Well about that...")
+		cutscene:text("* I'm not too sure myself. But I gave myself the name \"Starry\"!")
+		cutscene:text("* I think I'm the only thing living in those wastelands.")
+		cutscene:text("* Well, the only one sane, at least.")
+		cutscene:text("* I see.", "nervous", "susie")
+		cutscene:text("* Starry, huh? My name's Susie. And that's Hero.", "smile", "susie")
+		cutscene:text("* Ah yes! You must be the ones I felt the arrival of!")
+		cutscene:text("* You... felt our arrival?", "nervous_side", "susie")
+		cutscene:text("* Yes! I had a strong urge telling me that someone appeared here.")
+		cutscene:text("* And whoever that was, I am meant to help them.")
+
+		cutscene:wait(0.5)
+
+		cutscene:text("* (Ralsei did say Darkners feel the need to help Lightners...)", "shy", "susie")
+		cutscene:text("* (But he never mentioned actually feeling our arrival?)", "sus_nervous", "susie")
+
+		cutscene:wait(0.5)
+
+		cutscene:text("* Okay, that's great and all but uh...", "neutral_opened_b", "hero")
+		cutscene:text("* Do you know how to get out of here?", "really", "hero")
+		cutscene:text("* Or save this place, I don't know.", "neutral_closed_b", "hero")
+		cutscene:text("* I... think so?")
+		cutscene:text("* There's nothing in this place as far as I'm aware but maybe...")
+		cutscene:text("* Maybe there's something at the end that could help you!")
+
+		cutscene:text("* I guess that's how those adventures work.", "neutral_closed", "hero")
+		cutscene:text("* Alright, let's go.", "happy", "hero")
+
+		cutscene:slidePath(starry, {
+			{515, starry.y},
+			{515, 505}
+		}, {time=0.5})
+
+		local pos_player = {630, 610}
+		local jumps = {}
+
+		table.insert(jumps, cutscene:jumpTo(player, pos_player[1], pos_player[2], 10, 1))
+		for i,follow in ipairs(Game.world.followers) do
+			table.insert(jumps, cutscene:jumpTo(follow1, pos_player[1]-80*i, pos_player[2], 10, 1))
+		end
+		Assets.playSound("jump")
+
+		cutscene:wait(function()
+			local ok = true
+
+			for i,jump in ipairs(jumps) do
+				if not jump() then
+					ok = false
+					break
+				end
+			end
+
+			return ok
+		end)
+		Assets.playSound("impact")
+
+		cutscene:wait(0.5)
+
+		cutscene:spin(player, 3)
+		for i,follow in ipairs(Game.world.followers) do
+			cutscene:spin(follow, 3)
+		end
+		Assets.playSound("ui_cancel")
+
+		cutscene:wait(1)
+
+		cutscene:spin(player, 0)
+		for i,follow in ipairs(Game.world.followers) do
+			cutscene:spin(follow, 0)
+		end
+
+		player:setSprite("pose")
+		for i,follow in ipairs(Game.world.followers) do
+			follow:setSprite("pose")
+		end
+		Assets.playSound("bell")
+
+		cutscene:wait(0.5)
+
+		if not Utils.containsValue({"kris", "susie", "ralsei"}, GeneralUtils:getLeader().id) then
+			cutscene:text("* Hey, you're not bad at this, "..GeneralUtils:getLeader().name.."!", "sincere_smile", "susie")
+		else
+			cutscene:text("* Hell yeah! Like old times!", "smile", "susie")
+		end
+		cutscene:text("* Let's go!")
+
+		player:setSprite("walk")
+		for i,follow in ipairs(Game.world.followers) do
+			follow:setSprite("walk")
+		end
+		cutscene:interpolateFollowers()
+		cutscene:attachFollowersImmediate()
+		cutscene:wait(cutscene:attachCamera())
+
+		Game:setFlag("depths_intro_done", true)
 	end
 }
