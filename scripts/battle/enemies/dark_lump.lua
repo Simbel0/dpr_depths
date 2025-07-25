@@ -19,7 +19,7 @@ function Dummy:init()
     -- Enemy defense (usually 0)
     self.defense = 0
     -- Enemy reward
-    self.money = 100
+    self.money = 0
 
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
     self.spare_points = 0
@@ -87,10 +87,10 @@ end
 function Dummy:onSpareable()
     super.onSpareable(self)
 
-    self.name = "Dark Lump"
+    self.name = "Unknown"
 
     self.text = {
-        "* Dark Lump don't remember but is ready to accept it."
+        "* It doesn't remember but is ready to accept it."
     }
 
     self.dialogue = {
