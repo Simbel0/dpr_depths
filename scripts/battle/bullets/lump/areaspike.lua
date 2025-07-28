@@ -46,8 +46,6 @@ function ArenaSpike:update()
 end
 
 function ArenaSpike:draw()
-    super.draw(self)
-
     local r, g, b = unpack{0, 0.75, 0}
     Draw.setColor(r, g, b, self.alpha)
     love.graphics.circle("fill", self.dir == "left" and math.min(-self.start_x+self.bullet_timer, 0) or math.max(self.start_x-self.bullet_timer, 0), 0, 5)
@@ -67,6 +65,8 @@ function ArenaSpike:draw()
              spike_x,0
         )
     end
+
+    super.draw(self)
 end
 
 return ArenaSpike
