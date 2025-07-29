@@ -31,7 +31,7 @@ return {
 		local susie = cutscene:getCharacter("susie")
 		local hero = cutscene:getCharacter("hero")
 
-		if not susie and not hero then
+		if not susie or not hero then
 			cutscene:endCutscene()
 			return
 		end

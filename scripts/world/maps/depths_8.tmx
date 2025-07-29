@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="8">
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="9">
  <editorsettings>
   <export target="depths_8.lua" format="lua"/>
  </editorsettings>
@@ -51,6 +51,12 @@
    <properties>
     <property name="map" value="depths_7"/>
     <property name="marker" value="entry_r"/>
+   </properties>
+  </object>
+  <object id="8" name="transition" x="1280" y="200" width="40" height="80">
+   <properties>
+    <property name="map" value="depths_9"/>
+    <property name="marker" value="entry_l"/>
    </properties>
   </object>
  </objectgroup>

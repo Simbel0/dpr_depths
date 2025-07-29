@@ -12,7 +12,7 @@ return {
   nextlayerid = 9,
   nextobjectid = 32,
   properties = {
-    ["music"] = "creepylandscape",
+    ["music"] = "deeplandscape",
     ["name"] = "Depths - Safe Place"
   },
   tilesets = {
