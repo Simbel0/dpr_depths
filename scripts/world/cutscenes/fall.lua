@@ -137,17 +137,7 @@ return {
 		Game.world.camera.keep_in_bounds = false
 		cutscene:panTo(1000, 310)
 
-		local text = Text("FILE [UNKNOWN] SAVED")
-		text:setParallax(0)
-		text:setScreenPos(3, 3)
-		text:setLayer(WORLD_LAYERS["top"])
-		text.alpha = 5
-		text:setGraphics({
-			fade_to = 0,
-			fade = 0.1,
-			fade_callback = function(self) self:remove() end
-		})
-		Game.world:addChild(text)
+		Mod.spawnStarryText("SAVED")
 
 		local player = Game.world.player
 		local follow1 = Game.world.followers[1]
@@ -262,17 +252,7 @@ return {
 		Game.world.camera:setPosition(1000, 310)
 		follow1:setSprite("walk")
 
-		local text = Text("FILE [UNKNOWN] LOADED")
-		text:setParallax(0)
-		text:setScreenPos(3, 3)
-		text:setLayer(WORLD_LAYERS["top"])
-		text.alpha = 5
-		text:setGraphics({
-			fade_to = 0,
-			fade = 0.1,
-			fade_callback = function(self) self:remove() end
-		})
-		Game.world:addChild(text)
+		Mod.spawnStarryText("LOADED")
 
 		player:setPosition(player.x-640, 310)
 		cutscene:alignFollowers()

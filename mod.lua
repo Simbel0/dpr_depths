@@ -35,8 +35,8 @@ function Mod:onMapMusic(map, music)
     end
 end
 
-function Mod:spawnStarryText(state)
-    local text = Text("FILE [UNKNOWN] "..(state == "save" and "SAVED" or "LOADED"))
+function Mod.spawnStarryText(action)
+    local text = Text("FILE [UNKNOWN] "..action)
     text:setParallax(0)
     text:setScreenPos(3, 3)
     text:setLayer(WORLD_LAYERS["top"])
