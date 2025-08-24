@@ -424,7 +424,7 @@ return {
 		cutscene:text("* Glad to see you two are alright!", "neutral", "starry")
 		cutscene:text("* And... Who are you supposed to be?", "sus_nervous", "susie")
 		cutscene:text("* Oh, uhm... Well about that...", "neutral", "starry")
-		cutscene:text("* I'm not too sure myself. But I gave myself the name \"Starry\"!")
+		cutscene:text("* I'm not too sure myself. But I gave myself the name \"Starry\"!", "neutral", "starry")
 		cutscene:text("* I think I'm the only thing living in those wastelands.", "neutral", "starry")
 		cutscene:text("* Well, the only one sane, at least.", "neutral", "starry")
 		cutscene:text("* I see.", "nervous", "susie")
