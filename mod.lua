@@ -17,11 +17,38 @@ function Mod:init()
 
         return coroutine.yield()
     end)
+
+    ---@param followerInParty bool
+    Utils.hook(Game, "hasFollower", function(orig, self, chara)
+        if isClass(chara) then
+            chara = chara.actor.id
+        end
+        for i,v in ipairs(self.temp_followers) do
+            if type(v) == "table" then
+                if v[1] == chara then
+                    return true
+                end
+            elseif v == chara then
+                return true
+            end
+        end
+        return false
+    end)
 end
 
 function Mod:postLoad(dlc_swapping)
     if dlc_swapping and Game:getFlag("depths_intro_done") then
         Kristal.modswap_destination = {"depths_7", "warpbin"}
+    end
+
+    if Game:getFlag("depths_starry_in_party") and not Game:hasFollower("starry") then
+        Game:addFollower("starry")
+    end
+end
+
+function Mod:unload()
+    if Game:getFlag("depths_starry_in_party") then
+        Game:removeFollower("starry")
     end
 end
 

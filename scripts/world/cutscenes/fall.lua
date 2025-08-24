@@ -434,12 +434,14 @@ return {
 		cutscene:text("* Yes! I had a strong urge telling me that someone appeared here.", "neutral", "starry")
 		cutscene:text("* And whoever that was, I am meant to help them.", "neutral", "starry")
 
+		cutscene:look(follow1, "right")
 		cutscene:wait(0.5)
 
 		cutscene:text("* (Ralsei did say Darkners feel the need to help Lightners...)", "shy", "susie")
 		cutscene:text("* (But he never mentioned actually feeling our arrival?)", "sus_nervous", "susie")
 
 		cutscene:wait(0.5)
+		cutscene:look(follow1, "up")
 
 		cutscene:text("* Okay, that's great and all but uh...", "neutral_opened_b", "hero")
 		cutscene:text("* Do you know how to get out of here?", "really", "hero")
@@ -507,7 +509,7 @@ return {
 		else
 			cutscene:text("* Hell yeah! Like old times!", "smile", "susie")
 		end
-		cutscene:text("* Let's go!")
+		cutscene:text("* Let's go!", "smile", "susie")
 
 		player:setSprite("walk")
 		for i,follow in ipairs(Game.world.followers) do
