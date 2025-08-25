@@ -6,6 +6,7 @@ function RockToggleController:init(data)
     local properties = data.properties or {}
 
     self.flag = properties["flag"]
+    self.sound_success = false
 
     self.buttons_ids = Utils.parsePropertyList("button", properties)
 
@@ -46,6 +47,13 @@ function RockToggleController:updateTargets()
     local success = (flag ~= nil and flag >= #self.buttons or false)
     --print(flag, #self.buttons, success)
     if success then
+        if not self.sound_success then
+            Assets.playSound("bluh")
+            Assets.playSound("dtrans_flip")
+            Assets.playSound("dtrans_flip", 1, 0.7)
+        end
+        self.sound_success = true
+
         for _,target in ipairs(self.targets) do
             target.active = true
             target.visible = true
@@ -69,6 +77,7 @@ function RockToggleController:updateTargets()
         for _,target in ipairs(self.target_colliders) do
             target.collidable = true
         end
+        self.sound_success = false
     end
 end
 

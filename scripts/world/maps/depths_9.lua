@@ -9,8 +9,8 @@ return {
   height = 50,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 89,
+  nextlayerid = 8,
+  nextobjectid = 101,
   properties = {},
   tilesets = {
     {
@@ -49,24 +49,24 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0,
-        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 13, 14, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 23, 24, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 23, 24, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 8, 8, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 4, 0, 0, 0, 0, 0,
+        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 13, 14, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 18, 19, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 23, 24, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 23, 24, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 3, 3, 3, 3, 3, 3, 3, 3, 8, 8, 8, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 0, 0, 0, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
@@ -124,7 +124,7 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -163,10 +163,483 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 7,
+      name = "objects_below",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 1,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 1240,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 2,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1160,
+          y = 1280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 3,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 1280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 4,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1160,
+          y = 1320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 5,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 1320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 6,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1160,
+          y = 1240,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 7,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 1240,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 8,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 1320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 9,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 1280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 10,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1120,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 11,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1760,
+          y = 1160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 12,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 13,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1760,
+          y = 1200,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 14,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1200,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 15,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1760,
+          y = 1120,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 16,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1120,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 17,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1200,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 18,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 19,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1000,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 20,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1760,
+          y = 1040,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 21,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1040,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 22,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1760,
+          y = 1080,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 23,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1080,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 24,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1760,
+          y = 1000,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 25,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1000,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 26,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1080,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 27,
+          name = "sprite",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1040,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/events/magical_glass_new"
+          }
+        },
+        {
+          id = 91,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = 1680,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 92,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 1680,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 93,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 800,
+          y = 1680,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 94,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 840,
+          y = 1680,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 5,
       name = "collisions",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -641,6 +1114,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 90,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 1200,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -648,7 +1134,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 3,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
@@ -658,411 +1144,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 1,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1080,
-          y = 1240,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 2,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1160,
-          y = 1280,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 3,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 1280,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 4,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1160,
-          y = 1320,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 5,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 1320,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 6,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1160,
-          y = 1240,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 7,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 1240,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 8,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1080,
-          y = 1320,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 9,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1080,
-          y = 1280,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 10,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1680,
-          y = 1120,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 11,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1760,
-          y = 1160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 12,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 1160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 13,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1760,
-          y = 1200,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 14,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 1200,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 15,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1760,
-          y = 1120,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 16,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 1120,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 17,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1680,
-          y = 1200,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 18,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1680,
-          y = 1160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 19,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1680,
-          y = 1000,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 20,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1760,
-          y = 1040,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 21,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 1040,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 22,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1760,
-          y = 1080,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 23,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 1080,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 24,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1760,
-          y = 1000,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 25,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 1000,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 26,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1680,
-          y = 1080,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
-        {
-          id = 27,
-          name = "sprite",
-          type = "",
-          shape = "rectangle",
-          x = 1680,
-          y = 1040,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["texture"] = "world/events/magical_glass_new"
-          }
-        },
         {
           id = 30,
           name = "rockbutton",
@@ -1114,7 +1195,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["money"] = 100
+            ["money"] = 4
           }
         },
         {
@@ -1142,8 +1223,90 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "rockbuttons.first_special",
-            ["once"] = false
+            ["cutscene"] = "rockbuttons.first_special"
+          }
+        },
+        {
+          id = 95,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 1120,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 96,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 1120,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 97,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 1080,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 98,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 1080,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 99,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 760,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "depths_8",
+            ["marker"] = "entry_r"
+          }
+        },
+        {
+          id = 100,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 2000,
+          y = 1240,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "depths_10"
           }
         }
       }
@@ -1229,6 +1392,41 @@ return {
             ["target7"] = { id = 8 },
             ["target8"] = { id = 5 },
             ["target9"] = { id = 4 }
+          }
+        },
+        {
+          id = 89,
+          name = "rocktoggle",
+          type = "",
+          shape = "point",
+          x = 1505,
+          y = 968,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["button1"] = { id = 32 },
+            ["flag"] = "depths_9_bonus_rock_puzzles",
+            ["target1"] = { id = 19 },
+            ["target10"] = { id = 10 },
+            ["target11"] = { id = 16 },
+            ["target12"] = { id = 15 },
+            ["target13"] = { id = 18 },
+            ["target14"] = { id = 12 },
+            ["target15"] = { id = 11 },
+            ["target16"] = { id = 17 },
+            ["target17"] = { id = 14 },
+            ["target18"] = { id = 13 },
+            ["target19"] = { id = 90 },
+            ["target2"] = { id = 25 },
+            ["target3"] = { id = 24 },
+            ["target4"] = { id = 27 },
+            ["target5"] = { id = 21 },
+            ["target6"] = { id = 20 },
+            ["target7"] = { id = 26 },
+            ["target8"] = { id = 23 },
+            ["target9"] = { id = 22 }
           }
         }
       }

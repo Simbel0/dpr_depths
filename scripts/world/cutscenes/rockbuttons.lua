@@ -1,6 +1,29 @@
+-- TODO: figure out how other party members are gonna break that rock
 return {
 	default = function(cutscene, player, button, flag)
+		local susie = cutscene:getCharacter("susie")
+		local starry = cutscene:getCharacter("starry")
+		Utils.print(player, button, Game:getFlag(flag, 0))
 
+		cutscene:detachFollowers()
+
+		cutscene:wait(cutscene:walkTo(susie, button.x-50, button.y+40, 2, "up"))
+
+		cutscene:wait(0.5)
+
+		Assets.playSound("laz_c")
+		cutscene:setAnimation(susie, "battle/attack")
+		cutscene:wait(0.1)
+
+		Game.world:shake()
+		Assets.playSound("damage")
+		Assets.playSound("damage", 1, 0.7)
+		button:activate()
+
+		cutscene:wait(1.5)
+
+		susie:resetSprite()
+		cutscene:wait(cutscene:attachFollowers())
 	end,
 	first_special = function(cutscene, script, player)
 		print(Utils.dump(script), Utils.dump(player))
@@ -25,8 +48,8 @@ return {
 		cutscene:text("* ...What is this?", "nervous_side", "susie")
 
 		cutscene:text("* I'm not sure. It's like a mushroom growing straight from the rock.", "neutral", "starry")
-		cutscene:text("* It just happens here and there. I never managed to broke it.", "neutral", "starry")
-		cutscene:text("* Break it, you say?", "smile", "susie")
+		cutscene:text("* It just happens here and there. I never managed to break it.", "neutral", "starry")
+		cutscene:text("* Break it, huh?", "smile", "susie")
 
 		cutscene:waitMultiple(
 			cutscene:slideTo(starry, starry.x, starry.y-50),
@@ -36,7 +59,8 @@ return {
 		cutscene:wait(1.5)
 
 		Assets.playSound("laz_c")
-		cutscene:wait(cutscene:setAnimation(susie, "battle/attack"))
+		cutscene:setAnimation(susie, "battle/attack")
+		cutscene:wait(0.1)
 
 		Game.world:shake()
 		Assets.playSound("damage")
@@ -52,7 +76,7 @@ return {
 		cutscene:text("* ...", "neutral", "starry")
 		cutscene:text("* Is this normal?", "neutral", "starry")
 
-		cutscene:choicer({"That's just Susie", "I don't know"})
+		cutscene:choicer({"That's just\nSusie", "I don't know"})
 
 		local rect = Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 		rect:setColor(0, 0, 0)
@@ -76,16 +100,31 @@ return {
 		Game.world:addChild(rect)
 		Game.world:addChild(text)
 
-		for i=1,20 do
+		for i=1,5 do
 			Assets.stopAndPlaySound("static", Utils.random(0.5, 2), Utils.random(0.2, 2))
-			switchAlpha(Utils.round(Utils.random()))
-			cutscene:wait(Utils.random(0, 0.3))
+			switchAlpha(1)
+			cutscene:wait(Utils.random(0, 0.15))
+			switchAlpha(0)
+			cutscene:wait(Utils.random(0, 0.2))
 		end
-
 		hero:shake()
+		cutscene:wait(0.5)
+
+		rect:remove()
+		text:remove()
+
 		cutscene:text("* Yeah.", "shade", "hero")
 
 		cutscene:text("* Heh.", "closed_grin", "susie")
 		cutscene:text("* (You could have said it with more enthusiasm.)", "nervous_side", "susie")
+		cutscene:wait(0.1)
+
+		cutscene:text("* I see...", "neutral", "starry")
+		cutscene:text("* There might be more of those around.", "neutral", "starry")
+		cutscene:text("* Maybe breaking them will do something.", "neutral", "starry")
+		cutscene:text("* Awesome! Let's do that.", "smile", "susie")
+
+		susie:resetSprite()
+		cutscene:wait(cutscene:attachFollowers())
 	end
 }

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 9,
+  nextobjectid = 10,
   properties = {},
   tilesets = {
     {
@@ -223,6 +223,19 @@ return {
           type = "",
           shape = "point",
           x = 40,
+          y = 240,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 9,
+          name = "entry_r",
+          type = "",
+          shape = "point",
+          x = 1240,
           y = 240,
           width = 0,
           height = 0,

@@ -1,6 +1,14 @@
 function Mod:init()
     print("Loaded "..self.info.name.."!")
 
+    Utils.print = function(...)
+        local args = {...}
+        for i,v in ipairs(args) do
+            args[i] = Utils.dump(v)
+        end
+        print(unpack(args))
+    end
+
     --- Temporarily suspends execution of the cutscene script until multiple functions all return true.
     ---@param ... function Any amount of functions that returns a function for wait().
     ---@return any ... Any values passed into the adjacent Cutscene:resume(...) call. 
