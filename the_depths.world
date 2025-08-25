@@ -1,5 +1,82 @@
 {
     "maps": [
+        {
+            "fileName": "scripts/world/maps/depths_start.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -40,
+            "y": -40
+        },
+        {
+            "fileName": "scripts/world/maps/depths_1.tmx",
+            "height": 880,
+            "width": 800,
+            "x": 640,
+            "y": 0
+        },
+        {
+            "fileName": "scripts/world/maps/depths_2/depths_2.tmx",
+            "height": 480,
+            "width": 2800,
+            "x": 1480,
+            "y": 80
+        },
+        {
+            "fileName": "scripts/world/maps/depths_3/depths_3.tmx",
+            "height": 480,
+            "width": 1600,
+            "x": 4320,
+            "y": 240
+        },
+        {
+            "fileName": "scripts/world/maps/depths_4/depths_4.tmx",
+            "height": 1040,
+            "width": 6400,
+            "x": 5960,
+            "y": 240
+        },
+        {
+            "fileName": "scripts/world/maps/depths_5/depths_5.tmx",
+            "height": 3160,
+            "width": 6080,
+            "x": 12400,
+            "y": 480
+        },
+        {
+            "fileName": "scripts/world/maps/depths_6/depths_6.tmx",
+            "height": 600,
+            "width": 1280,
+            "x": 18520,
+            "y": 2840
+        },
+        {
+            "fileName": "scripts/world/maps/depths_7/depths_7.tmx",
+            "height": 920,
+            "width": 1200,
+            "x": 18920,
+            "y": 1840
+        },
+        {
+            "fileName": "scripts/world/maps/depths_8.tmx",
+            "height": 480,
+            "width": 1280,
+            "x": 20160,
+            "y": 2000
+        },
+        {
+            "fileName": "scripts/world/maps/depths_9.tmx",
+            "height": 2000,
+            "width": 2000,
+            "x": 21480,
+            "y": 1440
+        },
+        {
+            "fileName": "scripts/world/maps/depths_10.tmx",
+            "height": 1040,
+            "width": 1440,
+            "x": 23520,
+            "y": 2280
+        }
     ],
     "onlyShowAdjacentMaps": false,
     "type": "world"

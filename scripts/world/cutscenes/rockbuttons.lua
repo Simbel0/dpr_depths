@@ -7,7 +7,7 @@ return {
 
 		cutscene:detachFollowers()
 
-		cutscene:wait(cutscene:walkTo(susie, button.x-50, button.y+40, 2, "up"))
+		cutscene:wait(cutscene:walkTo(susie, button.x-50, button.y+15, 2, "up"))
 
 		cutscene:wait(0.5)
 
@@ -53,7 +53,7 @@ return {
 
 		cutscene:waitMultiple(
 			cutscene:slideTo(starry, starry.x, starry.y-50),
-			cutscene:walkTo(susie, starry.x, starry.y, nil, "right")
+			cutscene:walkTo(susie, starry.x, button.y+15, nil, "right")
 		)
 
 		cutscene:wait(1.5)
