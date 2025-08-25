@@ -2,7 +2,9 @@ local RockButton, super = Class(Event)
 
 function RockButton:init(data)
     data = data or {}
-    super.init(self, data)
+    Utils.print(data)
+    super.init(self, data.center_x, data.center_y, {data.width, data.height})
+    self:setOrigin(0.5)
 
     local properties = data.properties or {}
     self.world_id = data.id
@@ -12,6 +14,7 @@ function RockButton:init(data)
     self.cutscene = properties["cutscene"] or "rockbuttons.default"
 
     self:setSprite("world/events/rock_tumor")
+    --self.sprite:setPosition(-self.width/2, -self.height/2)
 
     self.solid = true
     self:setHitbox(0, self.height/2, self.width, self.height/2)
