@@ -1,6 +1,8 @@
 function Mod:init()
     print("Loaded "..self.info.name.."!")
 
+    Mod.DarkalgamateOutline = OutlineFX({57/255, 28/255, 53/255})
+
     Utils.print = function(...)
         local args = {...}
         for i,v in ipairs(args) do

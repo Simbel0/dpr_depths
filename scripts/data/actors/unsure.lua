@@ -1,28 +1,28 @@
-local actor, super = Class(Actor, "dark_lump")
+local actor, super = Class(Actor, "unsure")
 
 function actor:init()
     super.init(self)
 
     -- Display name (optional)
-    self.name = "Dark Lump"
+    self.name = "Unsure"
 
     -- Width and height for this actor, used to determine its center
-    self.width = 30
-    self.height = 44
+    self.width = 13
+    self.height = 11
 
     -- Hitbox for this actor in the overworld (optional, uses width and height by default)
-    self.hitbox = {0, 25, 19, 14}
+    --self.hitbox = {0, 25, 19, 14}
 
     -- Color for this actor used in outline areas (optional, defaults to red)
-    self.color = {0, 0, 0}
+    self.color = {1, 0, 0}
 
     -- Whether this actor flips horizontally (optional, values are "right" or "left", indicating the flip direction)
     self.flip = nil
 
     -- Path to this actor's sprites (defaults to "")
-    self.path = "enemies/dark_lump"
+    self.path = "enemies/unsure"
     -- This actor's default sprite or animation, relative to the path (defaults to "")
-    self.default = "generate_1"
+    self.default = "walk"
 
     -- Sound to play when this actor speaks (optional)
     self.voice = nil
@@ -41,8 +41,9 @@ function actor:init()
     self.animations = {
         -- Looping animation with 0.25 seconds between each frame
         -- (even though there's only 1 idle frame)
-        ["generate"] = {"generate", 0.25, false},
-        ["idle"] = {"idle", 0.25, true},
+        ["walk"] = {"walk", 0.25, true},
+        ["transition"] = {"transition", 1/10, false, next="idle"},
+        ["idle"] = {"idle", 0, true}
     }
 
     -- Table of sprite offsets (indexed by sprite name)

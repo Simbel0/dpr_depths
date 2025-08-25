@@ -9,8 +9,6 @@ function Dummy:init()
     self:setActor("dark_lump")
     self:setAnimation("idle")
 
-    self:addFX(OutlineFX({57/255, 28/255, 53/255}))
-
     -- Enemy health
     self.max_health = Utils.random(-200, 10000)
     self.health = Utils.random(-200, 10000)
