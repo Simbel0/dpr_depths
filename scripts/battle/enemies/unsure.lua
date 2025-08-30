@@ -16,14 +16,16 @@ function Dummy:init()
     self.max_health = 9999
     self.health = 9999
     -- Enemy attack (determines bullet damage)
-    self.attack = 0
+    self.attack = 10
     -- Enemy defense (usually 0)
-    self.defense = 0
+    self.defense = -1000
     -- Enemy reward
     self.money = 0
 
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
     self.spare_points = 0
+
+    self.tired_percentage = 0.1
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
@@ -38,64 +40,80 @@ function Dummy:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "Fragile, handle with hands."
+    self.check = "Looks as strong as it is fragile."
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* Huh?",
-        "* You laugh."
+        "* Worry about it.",
+        "* ????? raises its arms in self-defense.[wait:5]\nIt has none.",
+        "* The ground is shaking. Or is it ??????",
+        "* It growls like a bear.\n* Fight back.",
+        "* It growls like a bear.\n* Lay low.",
+        "* It growls like a bear.\n* Good night.",
+        "* It protects                                                                           ?"
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
     self.low_health_text = "* It feels crushed."
 
+    self.bear_mode = ""
+
     
-    self:registerAct("PickOn")
+    self:registerAct("Approach")
+    self:registerAct("Hug")
+    self:registerAct("Insult")
+    self:registerAct("Crush")
     local party = {}
     for i,v in ipairs(Game.battle.party) do
         table.insert(party, v.chara.id)
     end
-    self:registerAct("PickOnX", nil, party, 16)
+    self:registerAct("Nothing", nil, party, 1)
+end
+
+function Dummy:getEncounterText()
+    local text = super.getEncounterText(self)
+
+    if text:lower():find("fight back") then
+        self.bear_mode = "fight"
+    elseif text:lower():find("lay low") then
+        self.bear_mode = "lay"
+    elseif text:lower():find("good night") then
+        self.bear_mode = "night"
+    else
+        self.bear_mode = ""
+    end
+
+    return text
+end
+
+function Dummy:onHurt(amount, battler)
+    if self.bear_mode == "fight" then
+        self:addMercy(25)
+    end
+    super.onHurt(self, amount, battler)
 end
 
 function Dummy:onAct(battler, name)
-    if name == "Smile" then
-        -- Give the enemy 100% mercy
-        self:addMercy(100)
-        -- Change this enemy's dialogue for 1 turn
-        self.dialogue_override = "... ^^"
-        -- Act text (since it's a list, multiple textboxes)
-        return {
-            "* You smile.[wait:5]\n* The dummy smiles back.",
-            "* It seems the dummy just wanted\nto see you happy."
-        }
-
-    elseif name == "Tell Story" then
-        -- Loop through all enemies
-        for _, enemy in ipairs(Game.battle.enemies) do
-            -- Make the enemy tired
-            enemy:setTired(true)
+    if name == "Nothing" then
+        if self.bear_mode == 'lay' then
+            self:addMercy(35)
+            return "* The party does nothing. "..self.name.." feels more relaxed."
+        else
+            self:addMercy(5)
+            return "* The party does nothing. "..self.name.." stays vigilant."
         end
-        return "* You and Ralsei told the dummy\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
-
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
-        self:addMercy(50)
-        if battler.chara.id == "ralsei" then
-            -- R-Action text
-            return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
-        elseif battler.chara.id == "susie" then
-            -- S-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
-            Game.battle:startActCutscene("dummy", "susie_punch")
-            return
-        else
-            -- Text for any other character (like Noelle)
-            return "* "..battler.chara:getName().." straightened the\ndummy's hat."
-        end
+        -- self:addMercy(5)
+        return "* But "..battler.chara:getName().." doesn't know what to do."
     end
 
     -- If the act is none of the above, run the base onAct function
     -- (this handles the Check act)
     return super.onAct(self, battler, name)
+end
+
+function Dummy:onDefeat(damage, battler)
+    self:onDefeatFatal(damage, battler)
 end
 
 return Dummy
