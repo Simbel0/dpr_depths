@@ -9,7 +9,8 @@ function Dummy:init()
     self:setActor("unsure")
 
     self:setAnimation("transition")
-    Game.battle.timer:tween(2, self, {scale_x=4, scale_y=4})
+    self.width = 70
+    self.height = 70
 
     -- Enemy health
     self.max_health = 9999

@@ -42,7 +42,7 @@ function actor:init()
         -- Looping animation with 0.25 seconds between each frame
         -- (even though there's only 1 idle frame)
         ["walk"] = {"walk", 0.25, true},
-        ["transition"] = {"transition", 1/10, false, next="idle"},
+        ["transition"] = {"transition", 1/20, false, next="idle"},
         ["idle"] = {"idle", 0, true}
     }
 
