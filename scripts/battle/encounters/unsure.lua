@@ -29,7 +29,7 @@ end
 
 function Dummy:createSoul(...)
     local soul = super.createSoul(self, ...)
-    soul.onDamage = function(selfb, bullet, dmg)
+    soul.onDamage = function(_, bullet, dmg)
         if dmg > 0 and self.enemy.bear_mode == "night" then
             local amount = 25
             for id,health in pairs(self.track_hps) do

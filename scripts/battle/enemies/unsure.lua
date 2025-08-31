@@ -57,7 +57,7 @@ function Dummy:init()
 
     self.bear_mode = ""
 
-    
+    self.approched = 0
     self:registerAct("Approach")
     self:registerAct("Hug")
     self:registerAct("Insult")
@@ -93,7 +93,21 @@ function Dummy:onHurt(amount, battler)
 end
 
 function Dummy:onAct(battler, name)
-    if name == "Nothing" then
+    if name == "Approach" then
+        Game.battle.music.pitch = Game.battle.music.pitch + 0.1
+        self.defense = self.defense - 50
+        self.approched = self.approched + 1
+        self:shake(self.approched, 0, 0, (1/30)/self.approched)
+        if self.approched == 1 then
+            return "* You slowly approch "..self.name..".[wait:5] It's shaking."
+        elseif self.approched == 2 then
+            return "* You approch "..self.name.." even more.[wait:5] It's shaking harder."
+        elseif self.approched == 3 then
+            return "* You get as close to "..self.name.." as can be.[wait:5] It's shaking so much."
+        else
+            return "* Where are you going"..("?"*self.approched)
+        end
+    elseif name == "Nothing" then
         if self.bear_mode == 'lay' then
             self:addMercy(35)
             return "* The party does nothing. "..self.name.." feels more relaxed."
@@ -104,7 +118,7 @@ function Dummy:onAct(battler, name)
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
         -- self:addMercy(5)
-        return "* But "..battler.chara:getName().." doesn't know what to do."
+        return "* But "..battler.chara:getName().." didn't know what to do."
     end
 
     -- If the act is none of the above, run the base onAct function
