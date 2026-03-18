@@ -1,11 +1,10 @@
-local Dummy, super = Class(EnemyBattler)
+local DarkLump, super = Class(EnemyBattler)
 
-function Dummy:init()
+function DarkLump:init()
     super.init(self)
 
     -- Enemy name
     self.name = ""
-    -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/dummy.lua)
     self:setActor("dark_lump")
     self:setAnimation("idle")
 
@@ -60,7 +59,7 @@ function Dummy:init()
     self:registerAct("SmileX", "We love\nyou", battlers)
 end
 
-function Dummy:onAct(battler, name)
+function DarkLump:onAct(battler, name)
     if name == "Smile" then
         self:addMercy(40)
         return "* You smile.[wait:5]\n* "..self.name.." likes it."
@@ -81,7 +80,7 @@ function Dummy:onAct(battler, name)
     return super.onAct(self, battler, name)
 end
 
-function Dummy:onSpareable()
+function DarkLump:onSpareable()
     super.onSpareable(self)
 
     self.name = "Unknown"
@@ -95,8 +94,8 @@ function Dummy:onSpareable()
     }
 end
 
-function Dummy:onDefeat(damage, battler)
+function DarkLump:onDefeat(damage, battler)
     self:onDefeatFatal(damage, battler)
 end
 
-return Dummy
+return DarkLump

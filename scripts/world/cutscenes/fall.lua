@@ -356,6 +356,8 @@ return {
 		Game.world.camera.keep_in_bounds = true
 		cutscene:panTo(960, 0, 0.4)
 
+		Game.world.music:fade()
+
 		Assets.playSound("jump")
 		walk1 = cutscene:jumpTo(player, 1035, 105, 10, 1)
 		walk2 = cutscene:jumpTo(follow1, 895, 105, 10, 1, "fall_1", "landed_1")
@@ -393,6 +395,7 @@ return {
 		cutscene:detachCamera()
 		cutscene:detachFollowers()
 
+		Game.world.music:stop()
 		local old_pos = {}
 		for i,trans in ipairs(Game.world.stage:getObjects(Transition)) do
 			table.insert(old_pos, {trans:getPosition()})
@@ -424,8 +427,8 @@ return {
 		cutscene:text("* Glad to see you two are alright!", "neutral", "starry")
 		cutscene:text("* And... Who are you supposed to be?", "sus_nervous", "susie")
 		cutscene:text("* Oh, uhm... Well about that...", "neutral", "starry")
-		cutscene:text("* I'm not too sure myself. But I gave myself the name \"Starry\"!", "neutral", "starry")
-		cutscene:text("* I think I'm the only thing living in those wastelands.", "neutral", "starry")
+		cutscene:text("* I'm not too sure myself.\n* But I gave myself the name \"Starry\"!", "neutral", "starry")
+		cutscene:text("* I think I'm the only living thing in those wastelands.", "neutral", "starry")
 		cutscene:text("* Well, the only one sane, at least.", "neutral", "starry")
 		cutscene:text("* I see.", "nervous", "susie")
 		cutscene:text("* Starry, huh? My name's Susie. And that's Hero.", "smile", "susie")
@@ -522,6 +525,7 @@ return {
 		for i,trans in ipairs(Game.world.stage:getObjects(Transition)) do
 			trans:setPosition(unpack(old_pos[i]))
 		end
+		Game.world.music:play()
 
 		Game:setFlag("depths_intro_done", true)
 	end

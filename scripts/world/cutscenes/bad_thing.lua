@@ -210,7 +210,9 @@ return function(cutscene)
 
 	cutscene:wait(1)
 
-	cutscene:startEncounter("dark_lump", nil, {{"dark_lump", lump}})
+	cutscene:startEncounter("dark_lump", nil, {{"dark_lump", lump}}, {on_start=function()
+		Game.battle.encounter.flee = false
+	end})
 	lump:remove()
 	player:resetSprite()
 	follow1:resetSprite()
