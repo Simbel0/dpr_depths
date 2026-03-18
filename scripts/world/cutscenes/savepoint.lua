@@ -156,7 +156,6 @@ return function(cutscene)
     for i=1,3 do
 	    local sp_a = AfterImage(sp.sprite, 1)
 	    sp_a:setScaleOrigin(0.5, 0.37)
-	    print(0.2+(((i-1)*2)/10))
 	    sp_a:setGraphics({
 	    	grow = 0.2+((3-i)/10),
 	    	fade = 0.05,

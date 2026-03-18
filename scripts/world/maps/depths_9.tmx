@@ -3,6 +3,9 @@
  <editorsettings>
   <export target="depths_9.lua" format="lua"/>
  </editorsettings>
+ <properties>
+  <property name="music" value="deeplandscape"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/dark.tsx"/>
  <layer id="1" name="Calque de Tuiles 1" width="50" height="50">
   <data encoding="csv">

@@ -11,7 +11,9 @@ return {
   tileheight = 40,
   nextlayerid = 6,
   nextobjectid = 10,
-  properties = {},
+  properties = {
+    ["music"] = "deeplandscape"
+  },
   tilesets = {
     {
       name = "dark",

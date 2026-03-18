@@ -50,6 +50,10 @@ function Mod:onMapMusic(map, music)
         return "deeplandscape"
     end
 
+    if map.id == "depths_8" and not Game:getFlag("depths_starry_in_party") then
+        return ""
+    end
+
     if (map.id == "depths_4" or map.id == "depths_5" or map.id == "depths_6") and Game:getFlag("depths_stalac_assault") then
         return "creepychase"
     end
