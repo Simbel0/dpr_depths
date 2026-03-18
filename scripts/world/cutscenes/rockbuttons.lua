@@ -26,10 +26,10 @@ return {
 		cutscene:wait(cutscene:attachFollowers())
 	end,
 	first_special = function(cutscene, script, player)
-		print(Utils.dump(script), Utils.dump(player))
+		Utils.print(script, player)
 
 		local button = cutscene:getEvent(87)
-		print(Utils.dump(button))
+		Utils.print(button)
 
 		local hero = cutscene:getCharacter("hero")
 		local susie = cutscene:getCharacter("susie")
@@ -101,11 +101,11 @@ return {
 		Game.world:addChild(text)
 
 		for i=1,5 do
-			Assets.stopAndPlaySound("static", Utils.random(0.5, 2), Utils.random(0.2, 2))
+			Assets.stopAndPlaySound("static", MathUtils.random(0.5, 2), MathUtils.random(0.2, 2))
 			switchAlpha(1)
-			cutscene:wait(Utils.random(0, 0.15))
+			cutscene:wait(MathUtils.random(0, 0.15))
 			switchAlpha(0)
-			cutscene:wait(Utils.random(0, 0.2))
+			cutscene:wait(MathUtils.random(0, 0.2))
 		end
 		hero:shake()
 		cutscene:wait(0.5)

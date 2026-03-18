@@ -3,33 +3,16 @@ function Mod:init()
 
     Mod.DarkalgamateOutline = OutlineFX({57/255, 28/255, 53/255})
 
-    Utils.print = function(...)
+    HookSystem.hook(Utils, "print", function(_, ...)
         local args = {...}
         for i,v in ipairs(args) do
-            args[i] = Utils.dump(v)
+            args[i] = TableUtils.dump(v)
         end
         print(unpack(args))
-    end
-
-    --- Temporarily suspends execution of the cutscene script until multiple functions all return true.
-    ---@param ... function Any amount of functions that returns a function for wait().
-    ---@return any ... Any values passed into the adjacent Cutscene:resume(...) call. 
-    Utils.hook(Cutscene, "waitMultiple", function(orig, self, ...)
-        local waitholder = {...}
-        self.wait_func = function()
-            for i,wait in ipairs(waitholder) do
-                if not wait() then
-                    return false
-                end
-            end
-            return true
-        end
-
-        return coroutine.yield()
     end)
 
     ---@param followerInParty bool
-    Utils.hook(Game, "hasFollower", function(orig, self, chara)
+    HookSystem.hook(Game, "hasFollower", function(orig, self, chara)
         if isClass(chara) then
             chara = chara.actor.id
         end

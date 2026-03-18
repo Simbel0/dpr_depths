@@ -35,7 +35,7 @@ return function(cutscene)
 
 	cutscene:look(hero, "down")
 
-	cutscene:text("* "..Utils.titleCase(Game.save_name)..", can you hear me?", "neutral_closed", "hero")
+	cutscene:text("* "..StringUtils.titleCase(Game.save_name)..", can you hear me?", "neutral_closed", "hero")
 
 	local rect = Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 	rect:setColor(0, 0, 0)
@@ -65,8 +65,8 @@ return function(cutscene)
 
 	local static = Assets.getSound("static")
 	local function playStatic()
-		static:setVolume(Utils.random(0.5, 2))
-		static:setPitch(Utils.random(0.2, 2))
+		static:setVolume(MathUtils.random(0.5, 2))
+		static:setPitch(MathUtils.random(0.2, 2))
 		static:play()
 	end
 

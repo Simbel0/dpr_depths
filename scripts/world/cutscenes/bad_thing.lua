@@ -100,8 +100,8 @@ return function(cutscene)
 		rectConnect.alpha = a
 		textConnect.alpha = a
 
-		textConnect.x = orig_x + Utils.random(-100, 100)
-		textConnect.y = orig_y + Utils.random(-100, 100)
+		textConnect.x = orig_x + MathUtils.random(-100, 100)
+		textConnect.y = orig_y + MathUtils.random(-100, 100)
 	end
 
 	switchAlpha(0)
@@ -140,12 +140,12 @@ return function(cutscene)
 			Kristal.funnytitle()
 		end
 
-		if Utils.random()<0.7 then
+		if MathUtils.random()<0.7 then
 			switchAlpha(1)
 			Game.world.timer:after(0.1, function()
 				switchAlpha(0)
 			end)
-		elseif Utils.random()<0.7 then
+		elseif MathUtils.random()<0.7 then
 			static.alpha = 1
 			Game.world.timer:after(0.2, function()
 				static.alpha = 0

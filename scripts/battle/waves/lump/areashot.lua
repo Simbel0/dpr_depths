@@ -2,8 +2,8 @@ local AreaShot, super = Class(Wave)
 
 function AreaShot:onStart()
     self.timer:everyInstant(0.3, function()
-        local x = Utils.random()<0.5 and Game.battle.arena.left or Game.battle.arena.right
-        local y = Utils.random(Game.battle.arena.top+10, Game.battle.arena.bottom-10)
+        local x = MathUtils.random()<0.5 and Game.battle.arena.left or Game.battle.arena.right
+        local y = MathUtils.random(Game.battle.arena.top+10, Game.battle.arena.bottom-10)
 
         local dir = x < SCREEN_WIDTH/2 and "left" or "right"
 

@@ -31,14 +31,14 @@ function Depths_5:onEnter()
 
                 local dir = obj.properties.dir
                 if dir == "right" then
-                    min_x = Utils.clamp(player.x-SCREEN_WIDTH/4, obj.x, obj.x+obj.width)
-                    max_x = Utils.clamp(player.x+SCREEN_WIDTH, obj.x, obj.x+obj.width)
+                    min_x = MathUtils.clamp(player.x-SCREEN_WIDTH/4, obj.x, obj.x+obj.width)
+                    max_x = MathUtils.clamp(player.x+SCREEN_WIDTH, obj.x, obj.x+obj.width)
 
                     min_y = obj.y
                     max_y = obj.y+obj.height
                 elseif dir == "left" then
-                    min_x = Utils.clamp(player.x+SCREEN_WIDTH/4, obj.x, obj.x+obj.width)
-                    max_x = Utils.clamp(player.x-SCREEN_WIDTH, obj.x, obj.x+obj.width)
+                    min_x = MathUtils.clamp(player.x+SCREEN_WIDTH/4, obj.x, obj.x+obj.width)
+                    max_x = MathUtils.clamp(player.x-SCREEN_WIDTH, obj.x, obj.x+obj.width)
 
                     min_y = obj.y
                     max_y = obj.y+obj.height
@@ -46,21 +46,21 @@ function Depths_5:onEnter()
                     min_x = obj.x
                     max_x = obj.x+obj.width
 
-                    min_y = Utils.clamp(player.y+SCREEN_HEIGHT/4, obj.y, obj.y+obj.height)
-                    max_y = Utils.clamp(player.y-obj.height/2, obj.y, obj.y+obj.height)
+                    min_y = MathUtils.clamp(player.y+SCREEN_HEIGHT/4, obj.y, obj.y+obj.height)
+                    max_y = MathUtils.clamp(player.y-obj.height/2, obj.y, obj.y+obj.height)
                 elseif dir == "down" then
                     min_x = obj.x
                     max_x = obj.x+obj.width
 
-                    min_y = Utils.clamp(player.y-SCREEN_HEIGHT/4, obj.y, obj.y+obj.height)
-                    max_y = Utils.clamp(player.y+obj.height/2, obj.y, obj.y+obj.height)
+                    min_y = MathUtils.clamp(player.y-SCREEN_HEIGHT/4, obj.y, obj.y+obj.height)
+                    max_y = MathUtils.clamp(player.y+obj.height/2, obj.y, obj.y+obj.height)
                 else
                     print("The object doesn't have a dir property!")
                     return
                 end
 
-                local x = Utils.random(min_x, max_x)
-                local y = Utils.random(min_y, max_y)
+                local x = MathUtils.random(min_x, max_x)
+                local y = MathUtils.random(min_y, max_y)
 
                 if dir == "right" or dir == "left" then
                     spawn_y = y-SCREEN_HEIGHT+10
@@ -68,7 +68,7 @@ function Depths_5:onEnter()
                     spawn_y = y-SCREEN_HEIGHT
                 end
 
-                print("--SPAWN INFO--")
+                --[[print("--SPAWN INFO--")
                 print("RANGE X=["..min_x..", "..max_x.."]")
                 print("RANGE Y=["..min_y..", "..max_y.."]")
                 print("X="..x)
@@ -83,9 +83,9 @@ function Depths_5:onEnter()
                 print("X="..obj.x)
                 print("Y="..obj.y)
                 print("W="..obj.width)
-                print("H="..obj.height)
+                print("H="..obj.height)]]
 
-                Game.world:spawnBullet("dark_stalactite", x, y, Utils.random(0.2, 0.6), i==1, spawn_y)
+                Game.world:spawnBullet("dark_stalactite", x, y, MathUtils.random(0.2, 0.6), i==1, spawn_y)
             end
         end
     end)

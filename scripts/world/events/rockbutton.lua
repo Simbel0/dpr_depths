@@ -27,7 +27,7 @@ end
 
 function RockButton:getDebugInfo()
     local info = super.getDebugInfo(self)
-    table.insert(info, "Controller: "..(self.controller and Utils.getClassName(self.controller) or "nil"))
+    table.insert(info, "Controller: "..(self.controller and ClassUtils.getClassName(self.controller) or "nil"))
     table.insert(info, "Activated: "..self:isActivated())
     table.insert(info, "Cutscene: "..self.cutscene)
     return info

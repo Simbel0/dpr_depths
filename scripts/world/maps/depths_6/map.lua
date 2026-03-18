@@ -10,7 +10,7 @@ function Depths_6:onEnter()
     self.timer:every(0.5, function()
         if Game.world:inBattle() then
             for i=1,3 do
-                Game.world:spawnBullet("dark_stalactite", Utils.random(Game.world.player.x-SCREEN_WIDTH/4, Game.world.player.x+SCREEN_WIDTH), Utils.random(770, 880), Utils.random(0.2, 0.6), i==1)
+                Game.world:spawnBullet("dark_stalactite", MathUtils.random(Game.world.player.x-SCREEN_WIDTH/4, Game.world.player.x+SCREEN_WIDTH), MathUtils.random(770, 880), MathUtils.random(0.2, 0.6), i==1)
             end
         end
     end)
@@ -27,8 +27,8 @@ function Depths_6:onEnter()
                 x = pos[i][1]
                 y = pos[i][2]
             else
-                x = Utils.random(840, 1055)
-                y = Utils.random(240, 345)
+                x = MathUtils.random(840, 1055)
+                y = MathUtils.random(240, 345)
                 Game.flags["depths_stalac_after_pos"][i] = {x, y}
             end
             local sp = Sprite("bullets/stalac_debris", x, y)

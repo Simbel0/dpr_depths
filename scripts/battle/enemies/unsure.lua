@@ -105,7 +105,11 @@ function Dummy:onAct(battler, name)
         elseif self.approched == 3 then
             return "* You get as close to "..self.name.." as can be.[wait:5] It's shaking so much."
         else
-            return "* Where are you going"..("?"*self.approched)
+            local question = ""
+            for i=1,self.approched do
+                question = question.."?"
+            end
+            return "* Where are you going"..question
         end
     elseif name == "Nothing" then
         if self.bear_mode == 'lay' then

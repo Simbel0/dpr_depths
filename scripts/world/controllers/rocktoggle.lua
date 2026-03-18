@@ -8,9 +8,9 @@ function RockToggleController:init(data)
     self.flag = properties["flag"]
     self.sound_success = false
 
-    self.buttons_ids = Utils.parsePropertyList("button", properties)
+    self.buttons_ids = TiledUtils.parsePropertyList("button", properties)
 
-    self.target_objs = Utils.parsePropertyList("target", properties)
+    self.target_objs = TiledUtils.parsePropertyList("target", properties)
 end
 
 function RockToggleController:onLoad()

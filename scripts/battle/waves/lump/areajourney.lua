@@ -15,7 +15,7 @@ function ArenaJourney:onStart()
     local y = (142/2)+30
 
     while y < SCREEN_WIDTH-64 do
-        local x = (Utils.random()+self.dir_weight)<0.5 and Game.battle.arena.left or Game.battle.arena.right
+        local x = (MathUtils.random()+self.dir_weight)<0.5 and Game.battle.arena.left or Game.battle.arena.right
 
         local dir = x < SCREEN_WIDTH/2 and "left" or "right"
 
@@ -29,7 +29,7 @@ function ArenaJourney:onStart()
 
         bullet:addFX(MaskFX(Game.battle.arena), "arena_mask")
 
-        y = y + Utils.random(34, 64)
+        y = y + MathUtils.random(34, 64)
     end
 
     Game.battle.arena:setPhysics({

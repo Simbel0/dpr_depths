@@ -59,7 +59,7 @@ return {
 				return first_sta.y >= first_sta.dest_y
 			end)
 
-			Utils.removeFromTable(stalacs, first_sta)
+			TableUtils.removeValue(stalacs, first_sta)
 			first_sta:remove()
 			Assets.playSound("shakerbreaker")
 
@@ -78,7 +78,7 @@ return {
 		end
 
 		for i=1,10 do
-			createCutsceneStalac(Utils.random(1900, 2400), Utils.random(770, 880), Utils.random(0.2, 0.5))
+			createCutsceneStalac(MathUtils.random(1900, 2400), MathUtils.random(770, 880), MathUtils.random(0.2, 0.5))
 			cutscene:wait(0.1)
 		end
 		cutscene:during(function()
@@ -264,7 +264,7 @@ return {
 
 		local starry = Game.world:spawnNPC("starry", 960, 20)
 
-		cutscene:wait(cutscene:walkToSpeed(player, 820, player.y, player.walk_speed+5))
+		cutscene:wait(cutscene:walkToSpeed(player, 820, player.y, player:getBaseWalkSpeed()+5))
 
 		cutscene:detachFollowers()
 		cutscene:detachCamera()
@@ -381,7 +381,7 @@ return {
 			return Game.world.map.id == "depths_7"
 		end)
 
-		print("Follow up")
+		--print("Follow up")
 		cutscene:gotoCutscene("fall.post")
 	end,
 	post = function(cutscene)
@@ -398,7 +398,7 @@ return {
 			table.insert(old_pos, {trans:getPosition()})
 			trans:setPosition(0, 0)
 		end
-		print(Utils.dump(old_pos))
+		--print(TableUtils.dump(old_pos))
 
 		player:setPosition(545, Game.world.map.height*Game.world.map.tile_height+70)
 		follow1:setPosition(610, Game.world.map.height*Game.world.map.tile_height+70)
@@ -504,7 +504,7 @@ return {
 
 		cutscene:wait(0.5)
 
-		if not Utils.containsValue({"kris", "susie", "ralsei"}, GeneralUtils:getLeader().id) then
+		if not TableUtils.contains({"kris", "susie", "ralsei"}, GeneralUtils:getLeader().id) then
 			cutscene:text("* Hey, you're not bad at this, "..GeneralUtils:getLeader().name.."!", "sincere_smile", "susie")
 		else
 			cutscene:text("* Hell yeah! Like old times!", "smile", "susie")

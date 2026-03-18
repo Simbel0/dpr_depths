@@ -18,7 +18,7 @@ function ArenaSpike:init(x, y, dir, size)
     })
     self.debug_rect = {0, 0, 10, 10}
 
-    self.siner = Utils.random(100)
+    self.siner = MathUtils.random(100)
 
     self.destroy_on_hit = false
 end

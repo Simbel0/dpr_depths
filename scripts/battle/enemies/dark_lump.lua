@@ -10,8 +10,8 @@ function Dummy:init()
     self:setAnimation("idle")
 
     -- Enemy health
-    self.max_health = Utils.random(-200, 10000)
-    self.health = Utils.random(-200, 10000)
+    self.max_health = MathUtils.random(-200, 10000)
+    self.health = MathUtils.random(-200, 10000)
     -- Enemy attack (determines bullet damage)
     self.attack = 10
     -- Enemy defense (usually 0)
